@@ -1,6 +1,122 @@
-@import "@/style/base/inset.css";
-
-.demo-button{
+@import '@/style/base/inset.css';
+@import "@/style/base/methods.css";
+.demo-button {
+    --bg: var(--red);
+    --glitch-text: '';
+    --border-color: var(--blue);
+    --path: polygon(0 0, 100% 0, 100% 100%, 90% 100%, 90% 90%, 75% 90%, 75% 100%, 15% 100%, 0 75%);
     @mixin inset-button;
     padding: rem(20px 40px);
+    background-color: var(--bg);
+    clip-path: var(--path);
+    position: relative;
+}
+.demo-button::before {
+    @mixin position;
+    background-color: var(--bg);
+    clip-path: var(--path);
+    z-index: -1;
+    transform: translateX(-4px);
+}
+.demo-button::after {
+    @mixin position;
+    background-color: var(--border-color);
+    clip-path: var(--path);
+    z-index: -2;
+}
+.demo-button:hover .demo-button__glitch{
+    opacity: 1;
+    animation: Base-Ani 2s infinite;
+}
+.demo-button__glitch {
+    @mixin position;
+    opacity: 0;
+    --slice-0: polygon(0 2%, 100% 2%,100% 95%, 8% 95%);
+    --slice-1: polygon(0 75%, 100% 75%,100% 100%, 0 100%);
+    --slice-2: polygon(0 40%, 100% 40%,95% 50%, 0% 50%);
+    --slice-3: polygon(0 0, 100% 0%,100% 18%, 85% 22%, 0 22%);
+    --slice-4: polygon(0 0, 85% 0%,100% 100%, 100% 100%, 0 100%);
+    --slice-5: polygon(0 40%, 100% 40%,100% 75%, 85% 85%, 0 85%);
+    --slice-6: polygon(0 60%, 100% 60%,100% 80%, 85% 85%, 0 85%);
+    --slice-7: polygon(0 30%, 100% 30%,100% 55%, 30% 55%, 0 45%);
+}
+.demo-button__glitch::before {
+    @mixin position;
+    @mixin center;
+    background-color: var(--bg);
+    content: var(--glitch-text);
+    z-index: 0;
+    transform: translateX(-4px);
+}
+.demo-button__glitch::after {
+    @mixin position;
+    @mixin center;
+    z-index: -1;
+    background-color: var(--border-color);
+}
+@keyframes Base-Ani {
+    0% {
+        clip-path: var(--slice-0);
+        transform: translateX(var(--small));
+    }
+    4% {
+        clip-path: var(--slice-1);
+        transform: translateX(var(--small));
+    }
+    12% {
+        clip-path: var(--slice-2);
+        transform: translateX(var(--small));
+    }
+    18% {
+        clip-path: var(--slice-3);
+        transform: translateX(var(--small));
+    }
+    24% {
+        clip-path: var(--slice-4);
+        transform: translateX(var(--small));
+    }
+    32% {
+        clip-path: var(--slice-5);
+        transform: translateX(var(--small));
+    }
+    40% {
+        clip-path: var(--slice-6);
+        transform: translateX(var(--small));
+    }
+    44% {
+        clip-path: var(--slice-7);
+        transform: translateX(var(--small));
+    }
+    50% {
+        clip-path: var(--slice-3);
+        transform: translateX(var(--small));
+    }
+    57% {
+        clip-path: var(--slice-4);
+        transform: translateX(var(--small));
+    }
+    63% {
+        clip-path: var(--slice-5);
+        transform: translateX(var(--small));
+    }
+    69% {
+        clip-path: var(--slice-2);
+        transform: translateX(var(--small));
+    }
+    72% {
+        clip-path: var(--slice-0);
+        transform: translateX(var(--small));
+    }
+    82% {
+        clip-path: var(--slice-1);
+        transform: translateX(var(--small));
+    }
+    90% {
+        clip-path: var(--slice-5);
+        transform: translateX(var(--small));
+    }
+    100% {
+        clip-path: var(--slice-6);
+        transform: translateX(var(--small));
+    }
 }

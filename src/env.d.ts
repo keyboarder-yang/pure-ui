@@ -6,3 +6,9 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare type DemoButtonProperty = '--bg' | '--glitch-text'
+
+declare interface DemoButtonFunc {
+  setProperty: (key:DemoButtonProperty,value:any) => void
+}
