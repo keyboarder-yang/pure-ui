@@ -1,3 +1,3 @@
-import DemoButton from './button/DemoButton.vue'
+import Button from './button/Button.vue'
 
-export {DemoButton}
+export {Button}

@@ -1,7 +1,7 @@
 {
-  "name": "ui-yh",
+  "name": "sheep-design-vue",
   "private": false,
-  "version": "1.0.3",
+  "version": "1.0.2",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -31,13 +31,13 @@
   "files": [
     "dist"
   ],
-  "main": "dist/demo-ui.umd.js",
-  "module": "dist/demo-ui.es.js",
+  "main": "dist/sheep-design-vue.umd.js",
+  "module": "dist/sheep-design-vue.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/demo-ui.es.js",
-      "require": "./dist/demo-ui.umd.js"
+      "import": "./dist/sheep-design-vue.es.js",
+      "require": "./dist/sheep-design-vue.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   }

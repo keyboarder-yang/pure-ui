@@ -1,6 +1,6 @@
 @import '@/style/base/inset.css';
 @import "@/style/base/methods.css";
-.demo-button {
+.button {
     --bg: var(--red);
     --glitch-text: '';
     --border-color: var(--blue);
@@ -11,24 +11,24 @@
     clip-path: var(--path);
     position: relative;
 }
-.demo-button::before {
+.button::before {
     @mixin position;
     background-color: var(--bg);
     clip-path: var(--path);
     z-index: -1;
     transform: translateX(-4px);
 }
-.demo-button::after {
+.button::after {
     @mixin position;
     background-color: var(--border-color);
     clip-path: var(--path);
     z-index: -2;
 }
-.demo-button:hover .demo-button__glitch{
+.button:hover .button__glitch{
     opacity: 1;
     animation: Base-Ani 2s infinite;
 }
-.demo-button__glitch {
+.button__glitch {
     @mixin position;
     opacity: 0;
     --slice-0: polygon(0 2%, 100% 2%,100% 95%, 8% 95%);
@@ -40,7 +40,7 @@
     --slice-6: polygon(0 60%, 100% 60%,100% 80%, 85% 85%, 0 85%);
     --slice-7: polygon(0 30%, 100% 30%,100% 55%, 30% 55%, 0 45%);
 }
-.demo-button__glitch::before {
+.button__glitch::before {
     @mixin position;
     @mixin center;
     background-color: var(--bg);
@@ -48,7 +48,7 @@
     z-index: 0;
     transform: translateX(-4px);
 }
-.demo-button__glitch::after {
+.button__glitch::after {
     @mixin position;
     @mixin center;
     z-index: -1;

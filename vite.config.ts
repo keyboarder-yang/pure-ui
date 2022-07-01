@@ -20,8 +20,8 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
-            name: 'demo-ui-yh',
-            fileName: format => `demo-ui.${format}.js`
+            name: 'sheep-design-vue',
+            fileName: format => `sheep-design-vue.${format}.js`
         },
         rollupOptions: {
             external: ['vue'],

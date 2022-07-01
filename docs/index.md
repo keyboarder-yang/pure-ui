@@ -1,8 +1,9 @@
 ---
 home: true 
 heroImage: /images/hero.png 
-heroText: ui-yh 
-tagline: 1111 
+heroText: sheep-design-vue
+tagline: sheep-design-vue 
+title: sheep-design-vue
 actions:
     - text: Start→ 
       link: /guide/ 

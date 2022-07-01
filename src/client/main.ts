@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import  App from './App.vue'
-import {createDemoUI} from "../index";
+import {createPureUI} from "../index";
+import '../style/index.css'
 const app = createApp(App)
-app.use(createDemoUI())
+app.use(createPureUI())
 app.mount('#app')
