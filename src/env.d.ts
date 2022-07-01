@@ -7,7 +7,7 @@ declare module '*.vue' {
   export default component
 }
 
-declare type ButtonProperty = '--bg' | '--glitch-text'
+declare type ButtonProperty = '--light-color'
 
 declare interface ButtonFunc {
   setProperty: (key:ButtonProperty,value:any) => void

@@ -1,6 +1,6 @@
 :root {
-    --mini: rem(2px);
-    --small: rem(4px);
-    --normal: rem(8px);
-    --large: rem(16px);
+    --ms: rem(2px);
+    --ss: rem(4px);
+    --ns: rem(8px);
+    --ls: rem(16px);
 }
