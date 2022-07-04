@@ -7,7 +7,7 @@ declare module '*.vue' {
   export default component
 }
 
-declare type ButtonProperty = '--light-color'
+declare type ButtonProperty = '--light-color' | '--dark-color'
 
 declare interface ButtonFunc {
   setProperty: (key:ButtonProperty,value:any) => void

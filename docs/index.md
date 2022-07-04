@@ -2,7 +2,7 @@
 home: true 
 heroImage: /images/hero.png 
 heroText: sheep-design-vue
-tagline: sheep-design-vue 
+tagline: 个人组件库---暂用于自己开发学习 
 title: sheep-design-vue
 actions:
     - text: Start→ 
@@ -12,10 +12,10 @@ actions:
       link: /about/ 
       type: secondary
 features:
-    - title: 简介至上
-      details: 简洁至上啊
-    - title: 简介至上
-      details: 简洁至上啊
-    - title: 简介至上
-      details: 简洁至上啊
+    - title: vue3
+      details: vue3 ui组件库
+    - title: vue3
+      details: vue3 ui组件库
+    - title: vue3
+      details: vue3 ui组件库
 ---

@@ -1,18 +1,37 @@
+@import "../../style/base/common.css";
 .button {
-    --light-color: rgba(255,255,255,.5);
-    --dark-color: rgba(0,0,0,.2);
+    --light-color: var(--box-light-color);
+    --dark-color: var(--box-dark-color);
+    @mixin box-shadow;
     width: 80px;
     height: 30px;
     line-height: 30px;
     text-align: center;
-    box-shadow: 2px 2px 5px var(--dark-color),-2px -2px 5px var(--light-color);
     border-radius: 10px;
     border: none;
     transition: .4s all ease-out;
     cursor: pointer;
+    color: white;
     user-select: none;
 }
 .button:hover{
-    box-shadow:inset 2px 2px 5px var(--dark-color),inset -2px -2px 5px var(--light-color);
+    @mixin box-shadow-inset;
     letter-spacing: 3px;
 }
+
+.button--primary {
+    background-color: var(--primary-color);
+}
+
+.button--success {
+    background-color: var(--success-color);
+}
+
+.button--warning {
+    background-color: var(--warning-color);
+}
+
+.button--error {
+    background-color: var(--error-color);
+}
+
